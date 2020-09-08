@@ -28,9 +28,10 @@ ul
         grid-row: 1/2
         grid-template-columns: repeat(12, 1fr)
     &_content
-        background: #000
         grid-row: 2/3
-        grid-column: 1/13
+        display: grid
+        grid-template-columns: 6fr 5fr 1fr
+        align-self: center
     &_nav
         grid-column: 4/10
         ul
@@ -68,3 +69,8 @@ ul
                     path
                         stroke: #ffffff
                         transition: .25s
+
+h1
+    font-size: 60px
+    text-transform: uppercase
+    font-family: $montserrat
