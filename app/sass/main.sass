@@ -2,3 +2,69 @@
 
 // CUSTOM USER STYLES & IMPORTS
 
+.container
+    max-width: 1600px
+    margin: 0 auto
+    height: 100%
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+.header
+    height: 100vh
+    min-height: 800px
+    &_wrap
+        display: grid
+        height: 100%
+        grid-template-rows: 120px 1fr
+
+    &_top_line
+        height: 60px
+        align-self: center
+        display: grid
+        align-items: center
+        grid-row: 1/2
+        grid-template-columns: repeat(12, 1fr)
+    &_content
+        background: #000
+        grid-row: 2/3
+        grid-column: 1/13
+    &_nav
+        grid-column: 4/10
+        ul
+            display: block
+            text-align: center
+            li
+                display: inline-block
+                margin-right: 30px
+                &:last-child
+                    margin-right: 0
+                a
+                    color: $textcolor
+                    font-size: 15px
+                    text-transform: uppercase
+                    text-decoration: none
+                    transition: .25s
+                    &:hover
+                        color: $accent
+    &_buttons
+        grid-column: 10/13
+        display: flex
+        justify-content: flex-end
+        .button
+            width: 50px
+            height: 50px
+            background-color: #efefef
+            border-radius: 50%
+            margin-right: 15px
+            transition: .25s
+            &:last-child
+                margin-right: 0
+            &:hover
+                background-color: $accent
+                svg
+                    path
+                        stroke: #ffffff
+                        transition: .25s
